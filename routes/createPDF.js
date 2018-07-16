@@ -14,13 +14,13 @@ var doc = require('./docDefine');
             normal: __dirname + '/../fonts/微软雅黑.ttf',
             bold: __dirname + '/../fonts/微软雅黑.ttf',
             italics: __dirname + '/../fonts/微软雅黑.ttf',
-            bolditalics: __dirname + '/.. /fonts/微软雅黑.ttf'
+            bolditalics: __dirname + '/../fonts/微软雅黑.ttf'
         },
         DengXi: {
-            normal: __dirname + '/.. /fonts/Deng.ttf',
-            bold: __dirname + '/.. /fonts/Dengb.ttf',
-            italics: __dirname + '/.. /fonts/Dengl.ttf',
-            bolditalics: __dirname + '/.. /fonts/微软雅黑.ttf'
+            normal: __dirname + '/../fonts/Deng.ttf',
+            bold: __dirname + '/../fonts/Dengb.ttf',
+            italics: __dirname + '/../fonts/Dengl.ttf',
+            bolditalics: __dirname + '/../fonts/微软雅黑.ttf'
         }
     };
 
