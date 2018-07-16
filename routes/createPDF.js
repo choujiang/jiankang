@@ -2,6 +2,7 @@ var fs = require('fs');
 var doc = require('./docDefine');
 
  async function createPDF (user,fileName) {
+     console.log(__dirname);
     var fonts = {
         Roboto: {
             normal: 'Roboto-Regular.ttf',
@@ -10,16 +11,16 @@ var doc = require('./docDefine');
             bolditalics: 'Roboto-Italic.ttf'
         },
         微软雅黑: {
-            normal: 'fonts/微软雅黑.ttf',
-            bold: 'fonts/微软雅黑.ttf',
-            italics: 'fonts/微软雅黑.ttf',
-            bolditalics: 'fonts/微软雅黑.ttf'
+            normal: __dirname + '/../fonts/微软雅黑.ttf',
+            bold: __dirname + '/../fonts/微软雅黑.ttf',
+            italics: __dirname + '/../fonts/微软雅黑.ttf',
+            bolditalics: __dirname + '/.. /fonts/微软雅黑.ttf'
         },
         DengXi: {
-            normal: 'fonts/Deng.ttf',
-            bold: 'fonts/Dengb.ttf',
-            italics: 'fonts/Dengl.ttf',
-            bolditalics: 'fonts/微软雅黑.ttf'
+            normal: __dirname + '/.. /fonts/Deng.ttf',
+            bold: __dirname + '/.. /fonts/Dengb.ttf',
+            italics: __dirname + '/.. /fonts/Dengl.ttf',
+            bolditalics: __dirname + '/.. /fonts/微软雅黑.ttf'
         }
     };
 
@@ -36,7 +37,7 @@ var doc = require('./docDefine');
     var pdfDoc = printer.createPdfKitDocument(docDefinition);
 
     var promise = new Promise(resolve => pdfDoc
-        .pipe(fs.createWriteStream('pdfs/'+ fileName +'.pdf'))
+        .pipe(fs.createWriteStream(__dirname + '/../pdfs/'+ fileName +'.pdf'))
         .on('finish', resolve));
     console.log('write')
     pdfDoc.end();
