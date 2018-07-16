@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
 
 router.get('/', function(req, res, next) {
     console.log(__dirname);
-        var file = __dirname + '../pdfs/'+ req.query.fileName +'.pdf';
+        var file = __dirname + '../public/pdfs/'+ req.query.fileName +'.pdf';
     res.setHeader('Content-Type', 'application/pdf');
 
     res.download(file);

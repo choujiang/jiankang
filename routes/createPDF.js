@@ -37,7 +37,7 @@ var doc = require('./docDefine');
     var pdfDoc = printer.createPdfKitDocument(docDefinition);
 
     var promise = new Promise(resolve => pdfDoc
-        .pipe(fs.createWriteStream(__dirname + '/../pdfs/'+ fileName +'.pdf'))
+        .pipe(fs.createWriteStream(__dirname + '/../public/pdfs/'+ fileName +'.pdf'))
         .on('finish', resolve));
     console.log('write')
     pdfDoc.end();
