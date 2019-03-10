@@ -168,9 +168,8 @@ function definition(user) {
                     {
                         width: '87%',
                         margin: [0, 20, 0, 0],
-                        text: [
+                        text: 
                             itemDetail
-                        ]
                     },
                 ]
             },
